@@ -1,0 +1,72 @@
+body {
+    background-color: black; /* Define o fundo preto */
+    color: white; /* Define a cor do texto como branco para contraste */
+    font-family: Arial, sans-serif; /* Define uma fonte básica */
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.track {
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* Estilo para a logo */
+
+.logo {
+    display: flex;           /* Ativa o flexbox */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    height: 150px;            /* Define uma altura específica para o topo */
+    margin-top: 20px;         /* Espaço superior */
+}
+
+/* Ajuste para a imagem da logo */
+.logo img {
+    width: 400px; /* Tamanho da logo */
+}
+
+/* Estilo do botão de like */
+.like-button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.like-button:hover {
+    background-color: #218838;
+}
+
+/* Estilo do botão de like após ser clicado */
+.like-button.clicked {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/* Oculta o contador de likes por padrão */
+.admin-only {
+    display: none;  /* Invisível para os usuários normais */
+}
+
+/* Exibe o contador de likes quando necessário */
+.show-admin {
+    display: inline;  /* Visível apenas para você (admin) */
+}
