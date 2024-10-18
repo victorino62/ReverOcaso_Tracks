@@ -1,31 +1,31 @@
+/* Estilo do Body */
 body {
     background-color: black; /* Define o fundo preto */
     color: white; /* Define a cor do texto como branco para contraste */
     font-family: Arial, sans-serif; /* Define uma fonte básica */
-    margin: 0;
+    margin: 20px; /* Define a margem ao redor do conteúdo */
     padding: 0;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
+/* Título Principal */
 h1 {
-    text-align: center;
+    text-align: center; /* Centraliza o título */
+    margin-top: 10px; /* Margem para dar um pequeno espaço no topo */
 }
 
+/* Estilo das Tracks */
 .track {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espaço entre as faixas */
 }
 
+/* Controles de Volume */
 input[type="range"] {
-    width: 100%;
+    width: 100%; /* O controle ocupa toda a largura disponível */
+    background-color: #333; /* Fundo escuro para contraste */
+    cursor: pointer;
 }
 
 /* Estilo para a logo */
-
 .logo {
     display: flex;           /* Ativa o flexbox */
     justify-content: center;  /* Centraliza horizontalmente */
@@ -41,24 +41,25 @@ input[type="range"] {
 
 /* Estilo do botão de like */
 .like-button {
-    background-color: #28a745;
+    background-color: #28a745; /* Cor de fundo verde */
     border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-top: 10px;
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho do texto */
+    margin-top: 10px; /* Espaçamento superior */
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s; /* Animação para mudança de cor */
 }
 
 .like-button:hover {
-    background-color: #218838;
+    background-color: #218838; /* Cor de fundo ao passar o mouse */
 }
 
 /* Estilo do botão de like após ser clicado */
 .like-button.clicked {
-    background-color: gray;
-    cursor: not-allowed;
+    background-color: gray; /* Cor para indicar que foi clicado */
+    cursor: not-allowed; /* Cursor indica que não pode clicar */
 }
 
 /* Oculta o contador de likes por padrão */

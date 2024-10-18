@@ -14,13 +14,15 @@
     
     <h1>App Tracks</h1>
 
-    <!-- Botão para alternar a visualização dos likes (somente para admin) -->
-    <button onclick="toggleAdminView()">Admin View</button> <!-- Botão para alternar a visualização dos likes -->
+    <!-- Botão para alternar a visualização dos likes (somente para admin) 
+    <button onclick="toggleAdminView()">Admin View</button> -->
+    
 
+    <!-- Track 1 -->
     <div class="track">
-        <h3>Track 1</h3>
+        <h3>Adormecer 1</h3>
         <audio id="track1" controls>
-            <source src="audio/beta focus V1.mp3" type="audio/mpeg">
+            <source src="audio/Adormecer Track 1 V1.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         <label for="volume1">Volume</label>
@@ -28,11 +30,85 @@
 
         <!-- Botão de like -->
         <button class="like-button" id="like-track1" onclick="likeTrack('track1')">Like</button>
-        <span id="like-count-track1" class="admin-only">Likes: 0</span> <!-- Oculto inicialmente --> 
+        <span id="like-count-track1" class="admin-only">Likes: 0</span> <!-- Oculto inicialmente -->
     </div>
 
-    <!-- Mova o script para o final do body -->
+    <!-- Track 2 -->
+    <div class="track">
+        <h3>Adormecer 2</h3>
+        <audio id="track2" controls>
+            <source src="audio/Adormecer Track 2 V1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="volume2">Volume</label>
+        <input type="range" id="volume2" min="0" max="1" step="0.01" value="1">
+
+        <!-- Botão de like -->
+        <button class="like-button" id="like-track2" onclick="likeTrack('track2')">Like</button>
+        <span id="like-count-track2" class="admin-only">Likes: 0</span> <!-- Oculto inicialmente -->
+    </div>
+
+    <!-- Track 3 -->
+    <div class="track">
+        <h3>Adormecer 3</h3>
+        <audio id="track3" controls>
+            <source src="audio/Adormecer Track 3 V1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="volume3">Volume</label>
+        <input type="range" id="volume3" min="0" max="1" step="0.01" value="1">
+
+        <!-- Botão de like -->
+        <button class="like-button" id="like-track3" onclick="likeTrack('track3')">Like</button>
+        <span id="like-count-track3" class="admin-only">Likes: 0</span> <!-- Oculto inicialmente -->
+    </div>
+
+    <!-- Track 4 -->
+    <div class="track">
+        <h3>Adormecer 4</h3>
+        <audio id="track4" controls>
+            <source src="audio/Adormecer Track 4 V1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="volume4">Volume</label>
+        <input type="range" id="volume4" min="0" max="1" step="0.01" value="1">
+
+        <!-- Botão de like -->
+        <button class="like-button" id="like-track4" onclick="likeTrack('track4')">Like</button>
+        <span id="like-count-track4" class="admin-only">Likes: 0</span> <!-- Oculto inicialmente -->
+    </div>
+
+    <!-- Track 5 -->
+    <div class="track">
+        <h3>Adormecer 5</h3>
+        <audio id="track5" controls>
+            <source src="audio/Adormecer Track 5 V1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="volume5">Volume</label>
+        <input type="range" id="volume5" min="0" max="1" step="0.01" value="1">
+
+        <!-- Botão de like -->
+        <button class="like-button" id="like-track5" onclick="likeTrack('track5')">Like</button>
+        <span id="like-count-track5" class="admin-only">Likes: 0</span> <!-- Oculto inicialmente -->
+    </div>
+
+    <!-- Track 6 -->
+    <div class="track">
+        <h3>Adormecer 6</h3>
+        <audio id="track6" controls>
+            <source src="audio/Adormecer Track 6 V1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="volume6">Volume</label>
+        <input type="range" id="volume6" min="0" max="1" step="0.01" value="1">
+
+        <!-- Botão de like -->
+        <button class="like-button" id="like-track6" onclick="likeTrack('track6')">Like</button>
+        <span id="like-count-track6" class="admin-only">Likes: 0</span> <!-- Oculto inicialmente -->
+    </div>
+
+    <!-- Script do JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
-

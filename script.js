@@ -1,16 +1,3 @@
-// Seleciona os elementos de áudio e os controles de volume
-const track1 = document.getElementById('track1');
-
-
-const volume1 = document.getElementById('volume1');
-
-
-// Adiciona eventos para controlar o volume de cada faixa
-volume1.addEventListener('input', function() {
-    track1.volume = volume1.value;
-});
-
-
 // Função que alterna a visualização dos likes para você (admin)
 function toggleAdminView() {
     const likeCountElements = document.querySelectorAll('.admin-only');
@@ -52,7 +39,7 @@ function likeTrack(trackId) {
 
 // Função que carrega o estado dos likes ao carregar a página
 function loadLikes() {
-    const trackIds = ['track1']; // Adicione mais IDs de tracks conforme necessário
+    const trackIds = ['track1', 'track2', 'track3', 'track4', 'track5', 'track6'];
 
     trackIds.forEach(trackId => {
         const likeButton = document.getElementById(`like-${trackId}`);
@@ -72,54 +59,63 @@ function loadLikes() {
             likeCountElement.textContent = `Likes: ${currentLikes}`;
         }
 
-        // Verifica se já foi curtido e desativa o botão se sim
-        if (localStorage.getItem(`liked-${trackId}`)) {
-            likeButton.classList.add("clicked");
-            likeButton.textContent = "Liked";
-            likeButton.disabled = true;
+        // Reseta o estado do botão para "Like" ao carregar a página
+        likeButton.classList.remove("clicked");
+        likeButton.textContent = "Like";
+        likeButton.disabled = false; // Reativa o botão de like
+    });
+}
+
+// Adiciona eventos para controlar o volume de cada faixa
+function setupVolumeControls() {
+    const trackIds = ['track1', 'track2', 'track3', 'track4', 'track5', 'track6'];
+
+    trackIds.forEach((trackId, index) => {
+        const track = document.getElementById(trackId);
+        const volumeControl = document.getElementById(`volume${index + 1}`);
+
+        if (track && volumeControl) {
+            volumeControl.addEventListener('input', function () {
+                track.volume = volumeControl.value;
+            });
         }
     });
 }
 
-// Carrega os estados dos likes ao carregar a página
-document.addEventListener("DOMContentLoaded", () => {
-    loadLikes(); // Chama a função loadLikes
-});
+// Função para exibir os números de likes no console
+function showLikesInConsole() {
+    const trackIds = ['track1', 'track2', 'track3', 'track4', 'track5', 'track6'];
 
-// Função para limpar o localStorage
-function clearLocalStorage() {
-    localStorage.clear();
-}
-
-// Carrega os estados dos likes ao carregar a página
-document.addEventListener("DOMContentLoaded", () => {
-    clearLocalStorage(); // Limpa o localStorage ao carregar a página
-    loadLikes(); // Chama a função loadLikes
-});
-
-
-
-// Função que alterna a visualização dos likes para você (admin)
-function toggleAdminView() {
-    const likeCountElements = document.querySelectorAll('.admin-only');
-    likeCountElements.forEach(element => {
-        element.classList.toggle('show-admin');
+    trackIds.forEach(trackId => {
+        const likes = localStorage.getItem(`likes-${trackId}`) || 0;
+        console.log(`Track ${trackId}: ${likes} likes`);
     });
 }
 
+// Limpa o estado dos likes ao carregar a página
+function resetLikes() {
+    const trackIds = ['track1', 'track2', 'track3', 'track4', 'track5', 'track6'];
+    trackIds.forEach(trackId => {
+        localStorage.removeItem(`liked-${trackId}`);
+    });
+}
+
+// Carrega os estados dos likes e configurações ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    resetLikes(); // Reseta o estado dos likes para que o botão volte ao original
+    loadLikes(); // Chama a função loadLikes
+    setupVolumeControls(); // Configura os controles de volume
+});
+
 
 /*
-// Exemplo de como ativar a visualização dos likes (pode ser adaptado)
-// Digite "toggleAdminView()" no console do navegador para exibir os likes
-
-//copie no console Para limpar o localStorage e testar novamente o botão de "Like", siga este passo a passo:
-
 Abra o console do navegador:
 No Chrome, pressione Ctrl + Shift + I (ou Cmd + Option + I no Mac) e vá para a aba "Console".
 Digite o seguinte comando no console para limpar o localStorage:
 
 localStorage.clear();
 
+Abra o console e use showLikesInConsole() para ver os likes.
 
 
 */
