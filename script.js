@@ -1,4 +1,53 @@
-// Função que alterna a visualização dos likes para você (admin)
+function rateTrack(trackId, rating) {
+    // Salva a avaliação no localStorage
+    localStorage.setItem(`rating-${trackId}`, rating);
+
+    // Atualiza a exibição das estrelas
+    const ratingContainer = document.getElementById(`rating-${trackId}`);
+    const stars = ratingContainer.getElementsByClassName('fa-star');
+
+    for (let i = 0; i < stars.length; i++) {
+        if (i < rating) {
+            stars[i].classList.add('checked');
+        } else {
+            stars[i].classList.remove('checked');
+        }
+    }
+}
+
+// Carrega as avaliações salvas ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    const trackIds = ['track1'];
+    trackIds.forEach(trackId => {
+        const savedRating = localStorage.getItem(`rating-${trackId}`);
+        if (savedRating) {
+            rateTrack(trackId, parseInt(savedRating));
+        }
+    });
+});
+
+// Função para configurar os controles de volume de cada faixa
+function setupVolumeControls() {
+    const trackIds = ['track1', 'soundscape_asmr', 'soundscape_pink', 'soundscape_fx']; // Lista de IDs das faixas
+
+    trackIds.forEach((trackId, index) => {
+        const track = document.getElementById(trackId);
+        const volumeControl = document.getElementById(`volume${index + 1}`);
+
+        if (track && volumeControl) {
+            volumeControl.addEventListener('input', function () {
+                track.volume = volumeControl.value;
+            });
+        }
+    });
+}
+
+
+
+
+
+
+/* Função que alterna a visualização dos likes para você (admin)
 function toggleAdminView() {
     const likeCountElements = document.querySelectorAll('.admin-only');
     likeCountElements.forEach(element => {
@@ -37,7 +86,7 @@ function likeTrack(trackId) {
     likeCountElement.style.display = "none"; // Mantém oculto, mas o valor foi atualizado
 }
 
-// Função que carrega o estado dos likes ao carregar a página
+//Função que carrega o estado dos likes ao carregar a página
 function loadLikes() {
     const trackIds = ['track1', 'track2', 'track3', 'track4', 'track5', 'track6'];
 
@@ -64,7 +113,7 @@ function loadLikes() {
         likeButton.textContent = "Like";
         likeButton.disabled = false; // Reativa o botão de like
     });
-}
+    
 
 // Adiciona eventos para controlar o volume de cada faixa
 function setupVolumeControls() {
@@ -106,6 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadLikes(); // Chama a função loadLikes
     setupVolumeControls(); // Configura os controles de volume
 });
+
+
 
 
 /*

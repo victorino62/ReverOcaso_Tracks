@@ -20,7 +20,7 @@ h1 {
 
 /* Controles de Volume */
 input[type="range"] {
-    width: 100%; /* O controle ocupa toda a largura disponível */
+    width: 80%; /* O controle ocupa toda a largura disponível */
     background-color: #333; /* Fundo escuro para contraste */
     cursor: pointer;
 }
@@ -70,4 +70,18 @@ input[type="range"] {
 /* Exibe o contador de likes quando necessário */
 .show-admin {
     display: inline;  /* Visível apenas para você (admin) */
+}
+
+.checked {
+    color: gold; /* Cor das estrelas selecionadas */
+}
+
+.rating .fa-star {
+    cursor: pointer;
+    font-size: 24px; /* Tamanho das estrelas */
+    transition: color 0.3s; /* Animação suave ao selecionar */
+}
+
+.rating .fa-star:hover {
+    color: orange; /* Cor ao passar o mouse sobre a estrela */
 }
