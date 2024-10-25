@@ -12,6 +12,39 @@ h1 {
     text-align: center; /* Centraliza o título */
     margin-top: 10px; /* Margem para dar um pequeno espaço no topo */
 }
+/* Estilo do menu de navegação */
+nav {
+    background-color: #34495e;  /* Cor do fundo do menu */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da lista de links de navegação */
+nav ul {
+    list-style: none;  /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex;  /* Flexbox para distribuir os itens */
+    justify-content: center;  /* Centraliza horizontalmente */
+}
+
+/* Estilo dos itens da lista de navegação */
+nav ul li {
+    margin: 0 15px;  /* Espaçamento entre os links */
+}
+
+/* Estilo dos links de navegação */
+nav ul li a {
+    color: #ecf0f1;  /* Cor dos links: branco suave */
+    text-decoration: none;  /* Remove o sublinhado */
+    font-weight: bold;
+    transition: color 0.3s;  /* Animação suave na mudança de cor */
+}
+
+/* Cor dos links ao passar o mouse */
+nav ul li a:hover {
+    color: #1abc9c;  /* Verde claro ao passar o mouse */
+}
 
 /* Estilo das Tracks */
 .track {

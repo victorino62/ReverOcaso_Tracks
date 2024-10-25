@@ -1,4 +1,3 @@
-// Função para avaliar a track
 function rateTrack(trackId, rating) {
     // Salva a avaliação no localStorage
     localStorage.setItem(`rating-${trackId}`, rating);
@@ -25,18 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
             rateTrack(trackId, parseInt(savedRating));
         }
     });
+});
 
+document.addEventListener("DOMContentLoaded", () => {
     // Configurar os controles de volume assim que o documento estiver carregado
     setupVolumeControls();
 
     // Definir o volume inicial das faixas 2, 3 e 4 como 0
     setInitialVolume(['track2', 'track3', 'track4']);
-
-    // Configurar os botões globais de play/pause/stop
-    setupGlobalControls();
 });
 
-// Função para configurar os controles de volume de cada faixa
 function setupVolumeControls() {
     // Selecionar todos os elementos de áudio e seus controles de volume
     const audioTracks = document.querySelectorAll('audio');
@@ -57,7 +54,6 @@ function setupVolumeControls() {
     });
 }
 
-// Função para definir o volume inicial de certas faixas
 function setInitialVolume(trackIds) {
     trackIds.forEach(trackId => {
         const track = document.getElementById(trackId);
@@ -72,38 +68,6 @@ function setInitialVolume(trackIds) {
     });
 }
 
-// Função para configurar os botões globais de controle (Play, Pause, Stop)
-function setupGlobalControls() {
-    // Selecionar todas as faixas de áudio
-    const audioTracks = document.querySelectorAll('audio');
-
-    // Selecionar botões de controle global
-    const playAllButton = document.getElementById('playAll');
-    const pauseAllButton = document.getElementById('pauseAll');
-    const stopAllButton = document.getElementById('stopAll');
-
-    // Função para tocar todas as faixas
-    playAllButton.addEventListener('click', () => {
-        audioTracks.forEach(track => {
-            track.play();
-        });
-    });
-
-    // Função para pausar todas as faixas
-    pauseAllButton.addEventListener('click', () => {
-        audioTracks.forEach(track => {
-            track.pause();
-        });
-    });
-
-    // Função para parar todas as faixas
-    stopAllButton.addEventListener('click', () => {
-        audioTracks.forEach(track => {
-            track.pause();
-            track.currentTime = 0;  // Reinicia a faixa para o começo
-        });
-    });
-}
 
 
 

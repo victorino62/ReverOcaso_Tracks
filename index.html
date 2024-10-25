@@ -21,66 +21,16 @@
     <!-- Botão para alternar a visualização dos likes (somente para admin) 
     <button onclick="toggleAdminView()">Admin View</button> -->
     
-
-    <!-- Track 1 -->
-    <div class="track">
-        <h3>Adormecer 1</h3>
-        <audio id="track1" controls>
-            <source src="audio/Adormecer Track 1 V2 loop.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <label for="volume1">Volume</label>
-        <input type="range" id="volume1" min="0" max="1" step="0.01" value="1">
-
-    <!-- Avaliação por estrelas -->
-    <div class="rating" id="rating-track1">
-        <i class="fa fa-star" data-value="1" onclick="rateTrack('track1', 1)"></i>
-        <i class="fa fa-star" data-value="2" onclick="rateTrack('track1', 2)"></i>
-        <i class="fa fa-star" data-value="3" onclick="rateTrack('track1', 3)"></i>
-        <i class="fa fa-star" data-value="4" onclick="rateTrack('track1', 4)"></i>
-        <i class="fa fa-star" data-value="5" onclick="rateTrack('track1', 5)"></i>
-    </div>
-
-</div>
-<br><br>
-
-    <!-- Soundscape FX -->
-    <div class="track">
-        <h3>Soundscape FX</h3>
-        <audio id="soundscape_fx" controls>
-            <source src="audio/Soundscapes_FX_Designed.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <label for="volume2">Volume</label>
-        <input type="range" id="volume2" min="0" max="1" step="0.01" value="0">
-
-    </div>
-
-     <!-- Soundscape ASMR -->
-     <div class="track">
-        <h3>Soundscape ASMR</h3>
-        <audio id="soundscape_asmr" controls>
-            <source src="audio/Soundscapes_Ocean.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <label for="volume3">Volume</label>
-        <input type="range" id="volume3" min="0" max="1" step="0.01" value="0">
-
-    </div>
-
-         <!-- Soundscape Ruído Branco -->
-         <div class="track">
-            <h3>Soundscape Ruído Branco</h3>
-            <audio id="soundscape_pink" controls>
-                <source src="audio/Soundscapes_Pink_Noise.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            <label for="volume4">Volume</label>
-            <input type="range" id="volume4" min="0" max="1" step="0.01" value="0">
     
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adormecer_track1.html">Adormecer Track 1</a></li>
+                <li><a href="adormecer_track2.html">Adormecer Track 2</a></li>
+            </ul>
+        </nav>
+        <p>O Saulo me deve um xis de caxias.</p>
     
-
     <!-- Script do JavaScript -->
     <script src="script.js"></script>
 </body>
