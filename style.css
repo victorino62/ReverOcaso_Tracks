@@ -1,10 +1,10 @@
 /* Estilo do Body */
 body {
-    background-color: black; /* Define o fundo preto */
+    background-color: rgba(237, 102, 18, 0.639); /* Define o fundo preto */
     color: white; /* Define a cor do texto como branco para contraste */
     font-family: Arial, sans-serif; /* Define uma fonte básica */
     margin: 20px; /* Define a margem ao redor do conteúdo */
-    padding: 0;
+    padding: 20px;
 }
 
 /* Título Principal */
@@ -23,7 +23,7 @@ nav {
 nav ul {
     list-style: none;  /* Remove os marcadores de lista */
     padding: 0;
-    margin: 0;
+    margin: 30px 15px;
     display: flex;  /* Flexbox para distribuir os itens */
     justify-content: center;  /* Centraliza horizontalmente */
 }
@@ -49,13 +49,18 @@ nav ul li a:hover {
 /* Estilo das Tracks */
 .track {
     margin-bottom: 20px; /* Espaço entre as faixas */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
 }
 
 /* Controles de Volume */
 input[type="range"] {
-    width: 80%; /* O controle ocupa toda a largura disponível */
+    width: 15%; /* O controle ocupa toda a largura disponível */
     background-color: #333; /* Fundo escuro para contraste */
     cursor: pointer;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    margin: 30px 15px;
 }
 
 /* Estilo para a logo */
@@ -69,7 +74,7 @@ input[type="range"] {
 
 /* Ajuste para a imagem da logo */
 .logo img {
-    width: 400px; /* Tamanho da logo */
+    width: 350px; /* Tamanho da logo */
 }
 
 /* Estilo do botão de like */

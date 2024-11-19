@@ -3,34 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Mixer</title>
+    <title>ReverOcaso_Escute</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
    
 
 
 </head>
 <body>
+
+    <br><br>
+    <br><br>
     
     <div class="logo">
-        <img src="images/logoST.png" alt="Logo da Empresa">
+        <img src="images/rever ocaso fundo.png" alt="Logo da Empresa">
     </div>
+
+   
+    <br><br>
     
-    <h1>App Tracks</h1>
+    <h1></h1>
 
     <!-- Botão para alternar a visualização dos likes (somente para admin) 
     <button onclick="toggleAdminView()">Admin View</button> -->
     
+
+    <!-- Track 1 -->
+    <div class="track">
+        <h3>Música é Vida</h3>
+        <audio id="track1" controls>
+            <source src="audio/REVER OCASO - MUSIC IS GOD - V2.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="volume1">Volume</label>
+        <input type="range" id="volume1" min="0" max="1" step="0.01" value="1">
+
+    <!-- Avaliação por estrelas 
+    <div class="rating" id="rating-track1">
+        <i class="fa fa-star" data-value="1" onclick="rateTrack('track1', 1)"></i>
+        <i class="fa fa-star" data-value="2" onclick="rateTrack('track1', 2)"></i>
+        <i class="fa fa-star" data-value="3" onclick="rateTrack('track1', 3)"></i>
+        <i class="fa fa-star" data-value="4" onclick="rateTrack('track1', 4)"></i>
+        <i class="fa fa-star" data-value="5" onclick="rateTrack('track1', 5)"></i>
+    </div> -->
+
+</div>
+
+    <!-- Track 2 -->
+    <div class="track">
+        <h3>Céu de Baunilha</h3>
+        <audio id="track2" controls>
+            <source src="audio/REVER OCASO SUNSET TRACK 2 - Low Sun - V5.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="volume2">Volume</label>
+        <input type="range" id="volume2" min="0" max="1" step="0.01" value="1">
+
+    </div>
+
+     <!-- Track 3 -->
+     <div class="track">
+        <h3>Que nunca acabe</h3>
+        <audio id="track3" controls>
+            <source src="audio/RC + NÊ V3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="volume3">Volume</label>
+        <input type="range" id="volume3" min="0" max="1" step="0.01" value="1">
+
+    </div>
+
+         <!--Track 4 -->
+         <div class="track">
+            <h3>A primeira a gente nunca esquece</h3>
+            <audio id="track4" controls>
+                <source src="audio/REVER OCASO SUNSET TRACK 1 V3.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <label for="volume4">Volume</label>
+            <input type="range" id="volume4" min="0" max="1" step="0.01" value="1">
     
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="adormecer_track1.html">Adormecer Track 1</a></li>
-                <li><a href="adormecer_track2.html">Adormecer Track 2</a></li>
-            </ul>
-        </nav>
-        <p>O Saulo me deve um xis de caxias.</p>
+        </div>
+
+<br><br>
+<br><br>
+
+ <!-- Contêiner para o ícone do WhatsApp -->
+ <div class="whatsapp-contact">
+    <a href="https://api.whatsapp.com/send?phone=5551999561111" target="_blank">
+        <span class="iconify" data-icon="mdi:whatsapp" data-width="35" data-height="35"></span>
+    </a>
+</div>
+</div>
+
+
     
+    <!-- Footer com ícones de redes sociais -->
+    <footer id="contato">
+        <p>&copy; 2024 Victorino. Todos os direitos reservados.</p>
+        <div class="socials">
+            <a href="https://www.instagram.com/victorinomusica" target="_blank">
+                <span class="iconify" data-icon="mdi:instagram" data-width="30" data-height="30"></span>
+            </a>
+            <a href="https://youtube.com/user/musicavictorino" target="_blank">
+                <span class="iconify" data-icon="mdi:youtube" data-width="30" data-height="30"></span>
+            </a>
+        </div>
+    </footer>
+
     <!-- Script do JavaScript -->
     <script src="script.js"></script>
 </body>

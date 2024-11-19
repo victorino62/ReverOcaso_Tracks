@@ -57,7 +57,7 @@ function setupVolumeControls() {
     });
 }
 
-// Função para definir o volume inicial de certas faixas
+/* Função para definir o volume inicial de certas faixas
 function setInitialVolume(trackIds) {
     trackIds.forEach(trackId => {
         const track = document.getElementById(trackId);
@@ -70,7 +70,7 @@ function setInitialVolume(trackIds) {
             console.error(`Track ou controle de volume não encontrado para ID: ${trackId}`);
         }
     });
-}
+} */
 
 // Função para configurar os botões globais de controle (Play, Pause, Stop)
 function setupGlobalControls() {
