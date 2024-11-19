@@ -55,7 +55,7 @@ nav ul li a:hover {
 
 /* Controles de Volume */
 input[type="range"] {
-    width: 15%; /* O controle ocupa toda a largura disponível */
+    width: 30%; /* O controle ocupa toda a largura disponível */
     background-color: #333; /* Fundo escuro para contraste */
     cursor: pointer;
     justify-content: center;  /* Centraliza horizontalmente */
